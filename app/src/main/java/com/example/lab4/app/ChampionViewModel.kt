@@ -24,9 +24,9 @@ class ChampionViewModel : ViewModel() {
     val versionUpdateRequired: LiveData<Boolean> = _versionUpdateRequired
 
     private val _currentVersion = MutableLiveData<String>("12.6.1")
-//    val currentVersion: LiveData<String> = _currentVersion
+   val currentVersion: LiveData<String> = _currentVersion
     private val _latestVersion = MutableLiveData<String?>()
-//    val latestVersion: MutableLiveData<String?> = _latestVersion
+   val latestVersion: MutableLiveData<String?> = _latestVersion
 
     init {
         checkForNewVersion()

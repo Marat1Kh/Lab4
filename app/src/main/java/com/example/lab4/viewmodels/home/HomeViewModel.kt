@@ -1,4 +1,4 @@
-package com.example.lab4.viewmodels
+package com.example.lab4.viewmodels.home
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.auth.FirebaseAuth

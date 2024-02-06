@@ -5,7 +5,7 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import com.example.lab4.viewmodels.HomeViewModel
+import com.example.lab4.viewmodels.home.HomeViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.lab4.navigation.AppRouter
 import com.example.lab4.navigation.Screens
@@ -31,7 +31,6 @@ fun App(homeViewModel: HomeViewModel = viewModel()) {
                 is Screens.SignUpScreens -> {
                     SignUpScreen()
                 }
-
                 is Screens.LoginScreens -> {
                     LoginScreen()
                 }

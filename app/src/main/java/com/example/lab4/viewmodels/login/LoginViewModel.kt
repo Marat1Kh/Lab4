@@ -1,4 +1,4 @@
-package com.example.lab4.viewmodels
+package com.example.lab4.viewmodels.login
 
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel

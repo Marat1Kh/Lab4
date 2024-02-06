@@ -1,0 +1,97 @@
+{
+  "project_info": {
+    "project_number": "267548637204",
+    "project_id": "fintech-itmo",
+    "storage_bucket": "fintech-itmo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267548637204:android:cc4e2f3c5e3626903a4f01",
+        "android_client_info": {
+          "package_name": "com.example.fintech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267548637204-bj06o9hm4jg41v2e9r80t2ups3tc7ph7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrko_hER0jOjKM578mkNBZJRc50dNRnzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267548637204-bj06o9hm4jg41v2e9r80t2ups3tc7ph7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267548637204:android:c35de4152123f19f3a4f01",
+        "android_client_info": {
+          "package_name": "com.example.lab4"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267548637204-bj06o9hm4jg41v2e9r80t2ups3tc7ph7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrko_hER0jOjKM578mkNBZJRc50dNRnzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267548637204-bj06o9hm4jg41v2e9r80t2ups3tc7ph7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:267548637204:android:4afe44b7c316585a3a4f01",
+        "android_client_info": {
+          "package_name": "com.example.test"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "267548637204-bj06o9hm4jg41v2e9r80t2ups3tc7ph7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrko_hER0jOjKM578mkNBZJRc50dNRnzo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "267548637204-bj06o9hm4jg41v2e9r80t2ups3tc7ph7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

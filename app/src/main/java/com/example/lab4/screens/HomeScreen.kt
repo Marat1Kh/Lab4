@@ -24,7 +24,7 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.lab4.viewmodels.HomeViewModel
+import com.example.lab4.viewmodels.home.HomeViewModel
 import kotlinx.coroutines.launch
 import com.example.lab4.components.*
 import com.example.lab4.R
