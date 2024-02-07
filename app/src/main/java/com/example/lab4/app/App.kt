@@ -32,7 +32,6 @@ fun App(homeViewModel: HomeViewModel = viewModel()) {
         Crossfade(targetState = AppRouter.currentScreens, label = "") { currentState ->
             when (currentState.value) {
                 is Screens.SignUpScreens -> {
-
                     SignUpScreen()
                 }
                 is Screens.LoginScreens -> {

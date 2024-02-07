@@ -49,22 +49,20 @@ fun MainScreen(championViewModel: ChampionViewModel = viewModel()) {
                     color = Color.Black,
                     fontWeight = FontWeight.Bold,
                     fontSize = 24.sp,
-                    modifier = Modifier.padding(top = 24.dp, bottom = 32.dp) // Adjust padding as needed
+                    modifier = Modifier.padding(top = 24.dp, bottom = 32.dp)
                 )
                 // Define a consistent button style
                 val buttonModifier = Modifier
                     .fillMaxWidth()
                     .padding(vertical = 8.dp)
-                    .height(50.dp)  // Fixed height for all buttons
+                    .height(50.dp)  //fixed height button
 
                 val buttonColors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFF8B62F))
-                val buttonShape = RoundedCornerShape(20.dp)  // More rounded corners
+                val buttonShape = RoundedCornerShape(20.dp)
 
                 Button(
                     onClick = {
-                        // When the button is clicked, check for updates
                         if (updateRequired == true) {
-                            // Show snackbar instead of AlertDialog
                             scope.launch {
                                 val snackbarResult = scaffoldState.snackbarHostState.showSnackbar(
                                     message = "A new version of the champion data is available. Update?",

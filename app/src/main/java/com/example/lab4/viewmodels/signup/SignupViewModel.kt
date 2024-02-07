@@ -43,11 +43,6 @@ class SignupViewModel() : ViewModel() {
                 signUp()
             }
 
-            is SignupUIEvent.PrivacyPolicyCheckBoxClicked -> {
-                registrationUIState.value = registrationUIState.value.copy(
-                    privacyPolicyAccepted = event.status
-                )
-            }
         }
         validateDataWithRules()
     }
@@ -75,21 +70,18 @@ class SignupViewModel() : ViewModel() {
             password = registrationUIState.value.password
         )
 
-        val privacyPolicyResult = Validator.validatePrivacyPolicyAcceptance(
-            statusValue = registrationUIState.value.privacyPolicyAccepted
-        )
 
         registrationUIState.value = registrationUIState.value.copy(
             firstNameError = fNameResult.status,
             lastNameError = lNameResult.status,
             emailError = emailResult.status,
             passwordError = passwordResult.status,
-            privacyPolicyError = privacyPolicyResult.status
+
         )
 
 
         allValidationsPassed.value = fNameResult.status && lNameResult.status &&
-                emailResult.status && passwordResult.status && privacyPolicyResult.status
+                emailResult.status && passwordResult.status
 
     }
 
