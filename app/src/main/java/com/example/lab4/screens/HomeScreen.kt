@@ -25,15 +25,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.lab4.viewmodels.home.HomeViewModel
-import kotlinx.coroutines.launch
 import com.example.lab4.components.*
 import com.example.lab4.R
-import com.example.lab4.api.Champion
-import com.example.lab4.app.ChampionDetailScreen
-import com.example.lab4.app.ChampionViewModel
-import com.example.lab4.navigation.AppRouter
-import com.example.lab4.navigation.Screens
-import com.example.lab4.navigation.ButtonHandler
+import com.example.lab4.dto.Champion
+import com.example.lab4.viewmodels.ChampionViewModel
 
 @Composable
 fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
@@ -48,21 +43,15 @@ fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
         scaffoldState = scaffoldState,
         topBar = {
             AppToolbar(
-                toolbarTitle = stringResource(id = R.string.home),
+                toolbarTitle = stringResource(id = R.string.champions),
                 logoutButtonClicked = {
                     homeViewModel.logout()
-                },
-                navigationIconClicked = {
-                    coroutineScope.launch {
-                        scaffoldState.drawerState.open()
-                    }
+                },{
+
                 }
             )
         },
-        drawerGesturesEnabled = scaffoldState.drawerState.isOpen,
-        drawerContent = {
-            NavigationDrawerHeader(homeViewModel.emailId.value)
-        }
+
 
     ) { paddingValues ->
 
@@ -85,9 +74,6 @@ fun HomeScreen(homeViewModel: HomeViewModel = viewModel()) {
                     }
                 }
             }
-            ButtonHandler {
-                AppRouter.navigateTo(Screens.HomeScreens)
-            }
         }
     }
 }
@@ -106,10 +92,8 @@ fun ChampionList(champions: Map<String, Champion>, navController: NavController)
             )
         }
     }
-    ButtonHandler {
-        AppRouter.navigateTo(Screens.HomeScreens)
     }
-}
+
 @Preview
 @Composable
 fun HomeScreenPreview() {

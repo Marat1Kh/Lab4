@@ -1,6 +1,6 @@
 package com.example.lab4.api
 
-import com.example.lab4.api.ChampionData
+import com.example.lab4.dto.ChampionData
 import retrofit2.http.GET
 import retrofit2.http.Path
 

@@ -1,4 +1,6 @@
-package com.example.lab4.api
+package com.example.lab4.dto
+
+import kotlinx.serialization.Serializable
 
 data class Champion(
     val id: String,

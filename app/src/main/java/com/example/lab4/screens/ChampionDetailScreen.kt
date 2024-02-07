@@ -1,6 +1,5 @@
-package com.example.lab4.app
+package com.example.lab4.screens
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.material.MaterialTheme
@@ -9,11 +8,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import coil.compose.rememberImagePainter
-import com.example.lab4.api.Champion
-import com.example.lab4.navigation.AppRouter
-import com.example.lab4.navigation.ButtonHandler
-import com.example.lab4.navigation.Screens
+import com.example.lab4.dto.Champion
+import com.example.lab4.api.ChampionImage
 
 @Composable
 fun ChampionDetailScreen(champion: Champion) {

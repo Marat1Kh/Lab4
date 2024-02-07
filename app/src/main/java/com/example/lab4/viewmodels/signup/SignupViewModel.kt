@@ -57,7 +57,7 @@ class SignupViewModel() : ViewModel() {
             password = registrationUIState.value.password
         )
     }
-    // функция, выполняет валидацию данных
+    // функция, выполняет валидация данных
     private fun validateDataWithRules() {
         val fNameResult = Validator.validateFirstName(
             fName = registrationUIState.value.firstName

@@ -1,19 +1,16 @@
-package com.example.lab4.app
+package com.example.lab4.viewmodels
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import androidx.media3.common.util.Log
-import com.example.lab4.api.ChampionData
+import com.example.lab4.dto.ChampionData
 import com.example.lab4.api.ChampionService
 import com.example.lab4.api.VersionService
-import com.squareup.moshi.Json
 import kotlinx.coroutines.launch
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.http.GET
-import retrofit2.http.Path
+
 class ChampionViewModel : ViewModel() {
     private val _champions = MutableLiveData<ChampionData>()
     val champions: LiveData<ChampionData> = _champions
@@ -31,14 +28,12 @@ class ChampionViewModel : ViewModel() {
     init {
         checkForNewVersion()
     }
-
     private fun checkForNewVersion() {
         viewModelScope.launch {
             _latestVersion.value = fetchLatestVersion()
             _versionUpdateRequired.value = _currentVersion.value != _latestVersion.value
         }
     }
-
     fun updateVersionIfNeeded(confirmUpdate: Boolean) {
         viewModelScope.launch {
             if (confirmUpdate) {
@@ -48,7 +43,6 @@ class ChampionViewModel : ViewModel() {
             fetchChampionData(_currentVersion.value ?: "12.6.1")
         }
     }
-
     private fun fetchChampionData(version: String) {
         viewModelScope.launch {
             val retrofit = Retrofit.Builder()

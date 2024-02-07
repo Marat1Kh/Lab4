@@ -2,7 +2,7 @@
     <string name="app_name">Lab4</string>
     <string name="hello">Hey there, </string>
     <string name="create_account">Create an Account </string>
-    <string name="welcome">Welcome Back</string>
+    <string name="welcome">Welcome!</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="email">Email</string>
@@ -17,6 +17,7 @@
     <string name="go_to_login">Already have an account? Login</string>
     <string name="forgot_password">Forgot your password</string>
     <string name="home">Home</string>
+    <string name="champions">Champions</string>
     <string name="logout">Logout</string>
     <string name="menu">Menu</string>
     <string name="navigation_header">App Drawer</string>

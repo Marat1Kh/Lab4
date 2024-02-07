@@ -1,4 +1,4 @@
-package com.example.lab4.api
+package com.example.lab4.dto
 
 data class ChampionData(
     val type: String,

@@ -13,8 +13,11 @@ import com.example.lab4.screens.SignUpScreen
 import com.example.lab4.screens.LoginScreen
 import com.example.lab4.screens.MainScreen
 import com.example.lab4.screens.HomeScreen
+import dagger.hilt.android.HiltAndroidApp
+
 
 @Composable
+
 fun App(homeViewModel: HomeViewModel = viewModel()) {
     homeViewModel.checkForActiveSession()
 
@@ -29,6 +32,7 @@ fun App(homeViewModel: HomeViewModel = viewModel()) {
         Crossfade(targetState = AppRouter.currentScreens, label = "") { currentState ->
             when (currentState.value) {
                 is Screens.SignUpScreens -> {
+
                     SignUpScreen()
                 }
                 is Screens.LoginScreens -> {
@@ -40,6 +44,8 @@ fun App(homeViewModel: HomeViewModel = viewModel()) {
                 is Screens.HomeScreens -> {
                     HomeScreen()
                 }
+
+
             }
         }
     }

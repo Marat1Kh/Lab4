@@ -1,15 +1,15 @@
-package com.example.lab4.app
+package com.example.lab4.api
 import coil.compose.rememberImagePainter
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.layout.ContentScale
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.ui.Modifier
-import com.example.lab4.api.Champion
+import coil.annotation.ExperimentalCoilApi
+import com.example.lab4.dto.Champion
 
+@OptIn(ExperimentalCoilApi::class)
 @Composable
 fun ChampionImage(champion: Champion, modifier: Modifier = Modifier) {
-    val imageUrl = "https://ddragon.leagueoflegends.com/cdn/img/champion/loading/${champion.id}_0.jpg"
+    val imageUrl = "https://ddragon.leagueoflegends.com/cdn/12.6.1/img/champion/${champion.image.full}"
     Image(
         painter = rememberImagePainter(imageUrl),
         contentDescription = "Image of ${champion.name}",
