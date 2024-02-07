@@ -9,6 +9,5 @@ data class RegistrationUIState(
     var lastNameError : Boolean = false,
     var emailError :Boolean = false,
     var passwordError : Boolean = false,
-    var privacyPolicyError:Boolean = false
 
 )

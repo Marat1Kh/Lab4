@@ -14,12 +14,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 class ChampionViewModel : ViewModel() {
     private val _champions = MutableLiveData<ChampionData>()
     val champions: LiveData<ChampionData> = _champions
-
-
-
     private val _versionUpdateRequired = MutableLiveData<Boolean>()
     val versionUpdateRequired: LiveData<Boolean> = _versionUpdateRequired
-
     private val _currentVersion = MutableLiveData<String>("12.6.1")
    val currentVersion: LiveData<String> = _currentVersion
     private val _latestVersion = MutableLiveData<String?>()
